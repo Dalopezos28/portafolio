@@ -1,0 +1,94 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="header-container">
+    <div id="particles-js"></div>
+    <div class="content">
+        <h1 class="title">Diego Lopez</h1>
+        <p class="subtitle">Analista de Datos  & Business Intelligence </p>
+        <div class="social-buttons">
+            <a href="https://github.com/Dalopezos28" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dal-games-625714218/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Dalopezos28" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <a href="#contact" class="cta-button">Portafolio</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+particlesJS('particles-js',
+    {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#69b3a2"
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true
+            },
+            "size": {
+                "value": 3,
+                "random": true
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#69b3a2",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            }
+        },
+        "retina_detect": true
+    }
+);
+</script>
+
+<script>
+// Cambiar estilo del navbar al hacer scroll
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
+{% endblock %}
