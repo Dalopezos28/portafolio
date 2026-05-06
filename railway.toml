@@ -1,0 +1,5 @@
+[build]
+buildCommand = "cd proyecto_portafolio && python -m pip install -r requirements.txt && python manage.py collectstatic --noinput"
+
+[deploy]
+startCommand = "cd proyecto_portafolio && gunicorn proyecto_portafolio.wsgi --bind 0.0.0.0:$PORT --log-file -"
