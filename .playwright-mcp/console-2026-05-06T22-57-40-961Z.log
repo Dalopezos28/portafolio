@@ -1,0 +1,2 @@
+[    1192ms] ReferenceError: particlesJS is not defined
+    at http://localhost:8000/:537:1

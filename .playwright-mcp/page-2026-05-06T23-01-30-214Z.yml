@@ -1,0 +1,268 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "DL" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "Inicio" [ref=e7] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e8]:
+          - link "Sobre Mí" [ref=e9] [cursor=pointer]:
+            - /url: /#about
+        - listitem [ref=e10]:
+          - link "Experiencia" [ref=e11] [cursor=pointer]:
+            - /url: /#experience
+        - listitem [ref=e12]:
+          - link "Proyectos" [ref=e13] [cursor=pointer]:
+            - /url: /projects/
+        - listitem [ref=e14]:
+          - link "Contacto" [ref=e15] [cursor=pointer]:
+            - /url: /#contact
+  - generic [ref=e16]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: Hola, soy
+      - heading "Diego Lopez" [level=1] [ref=e21]
+      - paragraph [ref=e22]: Analista de Datos & Business Intelligence
+      - generic [ref=e23]:
+        - link " Ver Proyectos" [ref=e24] [cursor=pointer]:
+          - /url: "#projects"
+          - generic [ref=e25]: 
+          - text: Ver Proyectos
+        - link " Contactar" [ref=e26] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e27]: 
+          - text: Contactar
+      - generic [ref=e28]:
+        - link "GitHub" [ref=e29] [cursor=pointer]:
+          - /url: https://github.com/Dalopezos28
+          - generic [ref=e30]: 
+        - link "LinkedIn" [ref=e31] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/dal-games-625714218/
+          - generic [ref=e32]: 
+        - link "Twitter" [ref=e33] [cursor=pointer]:
+          - /url: https://x.com/Dalopezos28
+          - generic [ref=e34]: 
+    - generic [ref=e35]:
+      - generic [ref=e36]: Scroll
+      - generic [ref=e37]: 
+  - generic [ref=e39]:
+    - heading "Sobre Mí" [level=2] [ref=e40]
+    - paragraph [ref=e41]: Un poco de mi historia y lo que me apasiona
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - paragraph [ref=e44]: Soy Analista de Datos & Business Intelligence con más de 5 años de experiencia transformando datos complejos en decisiones estratégicas claras y accionables.
+        - paragraph [ref=e45]: Mi especialidad es construir pipelines de datos robustos, dashboards interactivos en Power BI y Tableau, y modelos predictivos con Python que impulsan el crecimiento del negocio.
+        - paragraph [ref=e46]: Me apasiona la intersección entre los datos y la estrategia empresarial. Creo firmemente que los mejores insights nacen de hacer las preguntas correctas — no solo de tener los datos correctos.
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: 5+
+          - text: Años de experiencia
+        - generic [ref=e50]:
+          - generic [ref=e51]: 30+
+          - text: Proyectos completados
+        - generic [ref=e52]:
+          - generic [ref=e53]: 1M+
+          - text: Registros procesados/día
+        - generic [ref=e54]:
+          - generic [ref=e55]: "3"
+          - text: Empresas asesoradas
+  - generic [ref=e57]:
+    - heading "Habilidades" [level=2] [ref=e58]
+    - paragraph [ref=e59]: Herramientas y tecnologías con las que trabajo a diario
+    - generic [ref=e60]:
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: 
+          - text: Python
+        - generic [ref=e65]: 90%
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 
+          - text: SQL
+        - generic [ref=e71]: 88%
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: 
+          - text: Power BI
+        - generic [ref=e77]: 92%
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]: 
+          - text: Pandas / NumPy
+        - generic [ref=e83]: 87%
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]: 
+          - text: Machine Learning
+        - generic [ref=e89]: 75%
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e94]: 
+          - text: Tableau
+        - generic [ref=e95]: 80%
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 
+          - text: Excel Avanzado
+        - generic [ref=e101]: 95%
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - generic [ref=e106]: 
+          - text: Git
+        - generic [ref=e107]: 80%
+  - generic [ref=e110]:
+    - heading "Experiencia Laboral" [level=2] [ref=e111]
+    - paragraph [ref=e112]: Mi trayectoria profesional en el mundo de los datos
+    - generic [ref=e113]:
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]: Analista de Datos Senior
+          - generic [ref=e119]:
+            - generic [ref=e120]: 
+            - text: Jan 2023 – Presente
+        - generic [ref=e121]:
+          - generic [ref=e122]: 
+          - text: DataTech Solutions
+        - paragraph [ref=e123]: Lideré el desarrollo de dashboards ejecutivos en Power BI para el monitoreo de KPIs de ventas y operaciones. Automaticé reportes semanales con Python reduciendo el tiempo de generación en un 70%. Realicé análisis predictivos de demanda que mejoraron la planificación del inventario en un 25%.
+        - generic [ref=e124]:
+          - generic [ref=e125]: Python
+          - generic [ref=e126]: Power BI
+          - generic [ref=e127]: SQL Server
+          - generic [ref=e128]: Pandas
+          - generic [ref=e129]: Scikit-learn
+          - generic [ref=e130]: Airflow
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: Analista de Business Intelligence
+          - generic [ref=e136]: Mar 2021 – Dec 2022
+        - generic [ref=e137]:
+          - generic [ref=e138]: 
+          - text: RetailMax Corp
+        - paragraph [ref=e139]: Diseñé y mantuve el data warehouse corporativo. Construí pipelines ETL para integrar datos de múltiples fuentes (ERP, CRM, e-commerce). Desarrollé modelos de segmentación de clientes con clustering que incrementaron la efectividad de campañas de marketing en un 35%.
+        - generic [ref=e140]:
+          - generic [ref=e141]: SQL
+          - generic [ref=e142]: Tableau
+          - generic [ref=e143]: Python
+          - generic [ref=e144]: SSIS
+          - generic [ref=e145]: Power BI
+          - generic [ref=e146]: PostgreSQL
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - generic [ref=e151]: Analista de Datos Junior
+          - generic [ref=e152]: Jun 2019 – Feb 2021
+        - generic [ref=e153]:
+          - generic [ref=e154]: 
+          - text: Innova Digital
+        - paragraph [ref=e155]: Desarrollé reportes automatizados con Python y Pandas para el equipo de marketing. Colaboré en la migración de reportes de Excel a Power BI, reduciendo horas de trabajo manual. Realicé limpieza y transformación de datos para análisis de comportamiento de usuarios.
+        - generic [ref=e156]:
+          - generic [ref=e157]: Python
+          - generic [ref=e158]: Excel
+          - generic [ref=e159]: Power BI
+          - generic [ref=e160]: MySQL
+          - generic [ref=e161]: Google Sheets
+  - generic [ref=e163]:
+    - heading "Proyectos Destacados" [level=2] [ref=e164]
+    - paragraph [ref=e165]: Algunos de mis trabajos más relevantes
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - generic [ref=e169]: 
+        - generic [ref=e170]:
+          - heading "Dashboard de Ventas E-commerce" [level=3] [ref=e171]
+          - paragraph [ref=e172]: Dashboard interactivo en Power BI que analiza métricas de ventas, comportamiento de clientes y tendencias de productos para una tienda online con más de 50 mil transacciones mensuales. Incluye análisis de cohortes y proyecciones de ingresos.
+          - generic [ref=e173]:
+            - generic [ref=e174]: Power BI
+            - generic [ref=e175]: DAX
+            - generic [ref=e176]: SQL Server
+            - generic [ref=e177]: Python
+          - link " GitHub" [ref=e179] [cursor=pointer]:
+            - /url: https://github.com/Dalopezos28
+            - generic [ref=e180]: 
+            - text: GitHub
+      - generic [ref=e181]:
+        - generic [ref=e183]: 
+        - generic [ref=e184]:
+          - heading "Análisis Predictivo de Churn" [level=3] [ref=e185]
+          - paragraph [ref=e186]: Modelo de Machine Learning con Scikit-learn para predecir abandono de clientes con 87% de precisión. Incluye pipeline de datos automatizado, análisis exploratorio completo y visualizaciones interactivas con Plotly Dash.
+          - generic [ref=e187]:
+            - generic [ref=e188]: Python
+            - generic [ref=e189]: Scikit-learn
+            - generic [ref=e190]: Pandas
+            - generic [ref=e191]: Plotly
+            - generic [ref=e192]: Jupyter
+          - link " GitHub" [ref=e194] [cursor=pointer]:
+            - /url: https://github.com/Dalopezos28
+            - generic [ref=e195]: 
+            - text: GitHub
+      - generic [ref=e196]:
+        - generic [ref=e198]: 
+        - generic [ref=e199]:
+          - heading "ETL Pipeline Automatizado" [level=3] [ref=e200]
+          - paragraph [ref=e201]: Sistema ETL desarrollado en Python que integra datos de 5 fuentes distintas (APIs REST, bases de datos, archivos CSV) en un data warehouse centralizado. Procesa más de 1 millón de registros diarios con validación automática de calidad.
+          - generic [ref=e202]:
+            - generic [ref=e203]: Python
+            - generic [ref=e204]: Airflow
+            - generic [ref=e205]: PostgreSQL
+            - generic [ref=e206]: Docker
+            - generic [ref=e207]: AWS S3
+          - link " GitHub" [ref=e209] [cursor=pointer]:
+            - /url: https://github.com/Dalopezos28
+            - generic [ref=e210]: 
+            - text: GitHub
+    - link "Ver todos los proyectos " [ref=e212] [cursor=pointer]:
+      - /url: /projects/
+      - text: Ver todos los proyectos
+      - generic [ref=e213]: 
+  - generic [ref=e215]:
+    - heading "Contacto" [level=2] [ref=e216]
+    - paragraph [ref=e217]: ¿Tienes un proyecto en mente? Hablemos.
+    - generic [ref=e218]:
+      - generic [ref=e219]:
+        - heading "¡Trabajemos juntos!" [level=3] [ref=e220]
+        - paragraph [ref=e221]: Estoy disponible para proyectos freelance, consultoría de datos y oportunidades laborales. Si tienes datos que necesitan análisis, un dashboard que construir o una estrategia de BI que implementar, me encantaría escucharte.
+        - generic [ref=e222]:
+          - link " diegoalgtr1@gmail.com" [ref=e223] [cursor=pointer]:
+            - /url: mailto:diegoalgtr1@gmail.com
+            - generic [ref=e224]: 
+            - text: diegoalgtr1@gmail.com
+          - link " linkedin.com/in/dal-games-625714218" [ref=e225] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/dal-games-625714218/
+            - generic [ref=e226]: 
+            - text: linkedin.com/in/dal-games-625714218
+          - link " github.com/Dalopezos28" [ref=e227] [cursor=pointer]:
+            - /url: https://github.com/Dalopezos28
+            - generic [ref=e228]: 
+            - text: github.com/Dalopezos28
+      - generic [ref=e229]:
+        - heading "Encuéntrame en" [level=3] [ref=e230]
+        - generic [ref=e231]:
+          - link " GitHub Dalopezos28" [ref=e232] [cursor=pointer]:
+            - /url: https://github.com/Dalopezos28
+            - generic [ref=e233]: 
+            - generic [ref=e234]:
+              - generic [ref=e235]: GitHub
+              - generic [ref=e236]: Dalopezos28
+          - link " LinkedIn Diego Lopez" [ref=e237] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/dal-games-625714218/
+            - generic [ref=e238]: 
+            - generic [ref=e239]:
+              - generic [ref=e240]: LinkedIn
+              - generic [ref=e241]: Diego Lopez
+          - link " Twitter / X @Dalopezos28" [ref=e242] [cursor=pointer]:
+            - /url: https://x.com/Dalopezos28
+            - generic [ref=e243]: 
+            - generic [ref=e244]:
+              - generic [ref=e245]: Twitter / X
+              - generic [ref=e246]: "@Dalopezos28"
+          - link " Email Enviar mensaje" [ref=e247] [cursor=pointer]:
+            - /url: mailto:diegoalgtr1@gmail.com
+            - generic [ref=e248]: 
+            - generic [ref=e249]:
+              - generic [ref=e250]: Email
+              - generic [ref=e251]: Enviar mensaje
+  - contentinfo [ref=e252]:
+    - paragraph [ref=e254]:
+      - text: © 2025
+      - link "Diego Lopez" [ref=e255] [cursor=pointer]:
+        - /url: /
+      - text: · Analista de Datos & BI
