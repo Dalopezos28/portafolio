@@ -1,0 +1,174 @@
+[
+  {
+    "model": "portfolio.workexperience",
+    "pk": 1,
+    "fields": {
+      "company": "DataTech Solutions",
+      "role": "Analista de Datos Senior",
+      "description": "Lideré el desarrollo de dashboards ejecutivos en Power BI para el monitoreo de KPIs de ventas y operaciones. Automaticé reportes semanales con Python reduciendo el tiempo de generación en un 70%. Realicé análisis predictivos de demanda que mejoraron la planificación del inventario en un 25%.",
+      "technologies": "Python, Power BI, SQL Server, Pandas, Scikit-learn, Airflow",
+      "start_date": "2023-01-01",
+      "end_date": null,
+      "current": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.workexperience",
+    "pk": 2,
+    "fields": {
+      "company": "RetailMax Corp",
+      "role": "Analista de Business Intelligence",
+      "description": "Diseñé y mantuve el data warehouse corporativo. Construí pipelines ETL para integrar datos de múltiples fuentes (ERP, CRM, e-commerce). Desarrollé modelos de segmentación de clientes con clustering que incrementaron la efectividad de campañas de marketing en un 35%.",
+      "technologies": "SQL, Tableau, Python, SSIS, Power BI, PostgreSQL",
+      "start_date": "2021-03-01",
+      "end_date": "2022-12-31",
+      "current": false,
+      "order": 2
+    }
+  },
+  {
+    "model": "portfolio.workexperience",
+    "pk": 3,
+    "fields": {
+      "company": "Innova Digital",
+      "role": "Analista de Datos Junior",
+      "description": "Desarrollé reportes automatizados con Python y Pandas para el equipo de marketing. Colaboré en la migración de reportes de Excel a Power BI, reduciendo horas de trabajo manual. Realicé limpieza y transformación de datos para análisis de comportamiento de usuarios.",
+      "technologies": "Python, Excel, Power BI, MySQL, Google Sheets",
+      "start_date": "2019-06-01",
+      "end_date": "2021-02-28",
+      "current": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 1,
+    "fields": {
+      "name": "Python",
+      "category": "prog",
+      "proficiency": 90,
+      "icon": "fab fa-python",
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 2,
+    "fields": {
+      "name": "SQL",
+      "category": "db",
+      "proficiency": 88,
+      "icon": "fas fa-database",
+      "order": 2
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 3,
+    "fields": {
+      "name": "Power BI",
+      "category": "viz",
+      "proficiency": 92,
+      "icon": "fas fa-chart-bar",
+      "order": 3
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 4,
+    "fields": {
+      "name": "Pandas / NumPy",
+      "category": "data",
+      "proficiency": 87,
+      "icon": "fas fa-table",
+      "order": 4
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 5,
+    "fields": {
+      "name": "Machine Learning",
+      "category": "data",
+      "proficiency": 75,
+      "icon": "fas fa-brain",
+      "order": 5
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 6,
+    "fields": {
+      "name": "Tableau",
+      "category": "viz",
+      "proficiency": 80,
+      "icon": "fas fa-chart-pie",
+      "order": 6
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 7,
+    "fields": {
+      "name": "Excel Avanzado",
+      "category": "tool",
+      "proficiency": 95,
+      "icon": "fas fa-file-excel",
+      "order": 7
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 8,
+    "fields": {
+      "name": "Git",
+      "category": "tool",
+      "proficiency": 80,
+      "icon": "fab fa-git-alt",
+      "order": 8
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 1,
+    "fields": {
+      "title": "Dashboard de Ventas E-commerce",
+      "description": "Dashboard interactivo en Power BI que analiza métricas de ventas, comportamiento de clientes y tendencias de productos para una tienda online con más de 50 mil transacciones mensuales. Incluye análisis de cohortes y proyecciones de ingresos.",
+      "image": null,
+      "url": "https://github.com/Dalopezos28",
+      "github": "https://github.com/Dalopezos28",
+      "technologies": "Power BI, DAX, SQL Server, Python",
+      "featured": true,
+      "created_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 2,
+    "fields": {
+      "title": "Análisis Predictivo de Churn",
+      "description": "Modelo de Machine Learning con Scikit-learn para predecir abandono de clientes con 87% de precisión. Incluye pipeline de datos automatizado, análisis exploratorio completo y visualizaciones interactivas con Plotly Dash.",
+      "image": null,
+      "url": "https://github.com/Dalopezos28",
+      "github": "https://github.com/Dalopezos28",
+      "technologies": "Python, Scikit-learn, Pandas, Plotly, Jupyter",
+      "featured": true,
+      "created_at": "2023-09-20T10:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 3,
+    "fields": {
+      "title": "ETL Pipeline Automatizado",
+      "description": "Sistema ETL desarrollado en Python que integra datos de 5 fuentes distintas (APIs REST, bases de datos, archivos CSV) en un data warehouse centralizado. Procesa más de 1 millón de registros diarios con validación automática de calidad.",
+      "image": null,
+      "url": "https://github.com/Dalopezos28",
+      "github": "https://github.com/Dalopezos28",
+      "technologies": "Python, Airflow, PostgreSQL, Docker, AWS S3",
+      "featured": true,
+      "created_at": "2023-05-10T10:00:00Z"
+    }
+  }
+]

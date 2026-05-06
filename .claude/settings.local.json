@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"c:\\\\Users\\\\diego\\\\OneDrive\\\\Desktop\\\\Desktop\\\\PROYECTO_PORTAFOLIO\\\\.venv\\\\Scripts\\\\python.exe\" manage.py makemigrations portfolio)"
+    ]
+  }
+}

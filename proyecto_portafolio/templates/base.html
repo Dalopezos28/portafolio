@@ -1,33 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Diego Lopez - Portfolio{% endblock %}</title>
+    <title>{% block title %}Diego Lopez — Analista de Datos & BI{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <a href="{% url 'portfolio:home' %}" class="logo">DL</a>
             <ul class="nav-links">
                 <li><a href="{% url 'portfolio:home' %}">Inicio</a></li>
+                <li><a href="{% url 'portfolio:home' %}#about">Sobre Mí</a></li>
+                <li><a href="{% url 'portfolio:home' %}#experience">Experiencia</a></li>
                 <li><a href="{% url 'portfolio:projects' %}">Proyectos</a></li>
-                <li><a href="{% url 'dashboard:dashboard_home' %}">Dashboard</a></li>
+                <li><a href="{% url 'portfolio:home' %}#contact">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
 
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 <a href="{% url 'portfolio:home' %}">Diego Lopez</a> · Analista de Datos & BI</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    const fill = e.target.querySelector('.skill-fill');
+                    if (fill) fill.style.width = fill.dataset.width;
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>

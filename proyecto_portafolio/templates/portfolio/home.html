@@ -1,94 +1,285 @@
-
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
-<div class="header-container">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
     <div id="particles-js"></div>
-    <div class="content">
-        <h1 class="title">Diego Lopez</h1>
-        <p class="subtitle">Analista de Datos  & Business Intelligence </p>
-        <div class="social-buttons">
-            <a href="https://github.com/Dalopezos28" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/dal-games-625714218/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/Dalopezos28" target="_blank"><i class="fab fa-twitter"></i></a>
+    <div class="hero-content">
+        <span class="hero-greeting">Hola, soy</span>
+        <h1 class="hero-title">Diego Lopez</h1>
+        <p class="hero-subtitle">Analista de Datos &amp; Business Intelligence</p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+                <i class="fas fa-folder-open"></i> Ver Proyectos
+            </a>
+            <a href="#contact" class="btn btn-outline">
+                <i class="fas fa-envelope"></i> Contactar
+            </a>
         </div>
-        <a href="#contact" class="cta-button">Portafolio</a>
+        <div class="social-buttons">
+            <a href="https://github.com/Dalopezos28" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dal-games-625714218/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com/Dalopezos28" target="_blank" rel="noopener" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
     </div>
-</div>
+    <div class="hero-scroll">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">Sobre Mí</h2>
+        <p class="section-subtitle">Un poco de mi historia y lo que me apasiona</p>
+        <div class="about-grid">
+            <div class="about-text fade-up">
+                <p>
+                    Soy <span class="highlight">Analista de Datos &amp; Business Intelligence</span> con más de 5 años
+                    de experiencia transformando datos complejos en decisiones estratégicas claras y accionables.
+                </p>
+                <p>
+                    Mi especialidad es construir pipelines de datos robustos, dashboards interactivos en
+                    <span class="highlight">Power BI y Tableau</span>, y modelos predictivos con Python que
+                    impulsan el crecimiento del negocio.
+                </p>
+                <p>
+                    Me apasiona la intersección entre los datos y la estrategia empresarial. Creo firmemente
+                    que los mejores insights nacen de hacer las preguntas correctas — no solo de tener los datos correctos.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card fade-up">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat-card fade-up">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Proyectos completados</span>
+                </div>
+                <div class="stat-card fade-up">
+                    <span class="stat-number">1M+</span>
+                    <span class="stat-label">Registros procesados/día</span>
+                </div>
+                <div class="stat-card fade-up">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Empresas asesoradas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills" id="skills">
+    <div class="container">
+        <h2 class="section-title">Habilidades</h2>
+        <p class="section-subtitle">Herramientas y tecnologías con las que trabajo a diario</p>
+        <div class="skills-grid">
+            {% for skill in skills %}
+            <div class="skill-card fade-up">
+                <div class="skill-header">
+                    <span class="skill-name">
+                        <i class="{{ skill.icon }}"></i>
+                        {{ skill.name }}
+                    </span>
+                    <span class="skill-percent">{{ skill.proficiency }}%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="{{ skill.proficiency }}%"></div>
+                </div>
+            </div>
+            {% empty %}
+            <p style="color:var(--text-muted);text-align:center;grid-column:1/-1;">Sin habilidades registradas.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="experience" id="experience">
+    <div class="container">
+        <h2 class="section-title">Experiencia Laboral</h2>
+        <p class="section-subtitle">Mi trayectoria profesional en el mundo de los datos</p>
+        <div class="timeline">
+            {% for exp in experiences %}
+            <div class="timeline-item fade-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <span class="timeline-role">{{ exp.role }}</span>
+                        <span class="timeline-period {% if exp.current %}current{% endif %}">
+                            {% if exp.current %}<i class="fas fa-circle" style="font-size:0.45rem;vertical-align:middle;margin-right:3px;"></i>{% endif %}
+                            {{ exp.get_period }}
+                        </span>
+                    </div>
+                    <div class="timeline-company">
+                        <i class="fas fa-building" style="margin-right:0.4rem;opacity:0.6;"></i>{{ exp.company }}
+                    </div>
+                    <p class="timeline-desc">{{ exp.description }}</p>
+                    <div class="timeline-techs">
+                        {% for tech in exp.get_tech_list %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p style="color:var(--text-muted);text-align:center;">Sin experiencias registradas.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS PREVIEW ===== -->
+<section class="projects-section" id="projects">
+    <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <p class="section-subtitle">Algunos de mis trabajos más relevantes</p>
+        <div class="projects-grid">
+            {% for project in featured_projects %}
+            <div class="project-card fade-up">
+                <div class="project-image">
+                    {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                    {% else %}
+                    <i class="fas fa-chart-line project-placeholder"></i>
+                    {% endif %}
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-desc">{{ project.description }}</p>
+                    {% if project.technologies %}
+                    <div class="project-techs">
+                        {% for tech in project.get_tech_list %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="project-links">
+                        {% if project.github %}
+                        <a href="{{ project.github }}" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        {% endif %}
+                        {% if project.url and project.url != project.github %}
+                        <a href="{{ project.url }}" target="_blank" rel="noopener" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p style="color:var(--text-muted);text-align:center;grid-column:1/-1;">Sin proyectos registrados.</p>
+            {% endfor %}
+        </div>
+        <div class="projects-cta">
+            <a href="{% url 'portfolio:projects' %}" class="btn btn-outline">
+                Ver todos los proyectos &nbsp;<i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-subtitle">¿Tienes un proyecto en mente? Hablemos.</p>
+        <div class="contact-grid">
+            <div class="contact-info fade-up">
+                <h3>¡Trabajemos juntos!</h3>
+                <p>
+                    Estoy disponible para proyectos freelance, consultoría de datos y oportunidades laborales.
+                    Si tienes datos que necesitan análisis, un dashboard que construir o una estrategia de BI
+                    que implementar, me encantaría escucharte.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:diegoalgtr1@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        diegoalgtr1@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/dal-games-625714218/" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin-in"></i>
+                        linkedin.com/in/dal-games-625714218
+                    </a>
+                    <a href="https://github.com/Dalopezos28" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                        github.com/Dalopezos28
+                    </a>
+                </div>
+            </div>
+            <div class="contact-social fade-up">
+                <h3>Encuéntrame en</h3>
+                <div class="social-grid">
+                    <a href="https://github.com/Dalopezos28" target="_blank" rel="noopener" class="social-card">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <div style="color:var(--white);font-weight:600;font-size:0.85rem;">GitHub</div>
+                            <div style="font-size:0.75rem;">Dalopezos28</div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dal-games-625714218/" target="_blank" rel="noopener" class="social-card">
+                        <i class="fab fa-linkedin-in"></i>
+                        <div>
+                            <div style="color:var(--white);font-weight:600;font-size:0.85rem;">LinkedIn</div>
+                            <div style="font-size:0.75rem;">Diego Lopez</div>
+                        </div>
+                    </a>
+                    <a href="https://x.com/Dalopezos28" target="_blank" rel="noopener" class="social-card">
+                        <i class="fab fa-twitter"></i>
+                        <div>
+                            <div style="color:var(--white);font-weight:600;font-size:0.85rem;">Twitter / X</div>
+                            <div style="font-size:0.75rem;">@Dalopezos28</div>
+                        </div>
+                    </a>
+                    <a href="mailto:diegoalgtr1@gmail.com" class="social-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div style="color:var(--white);font-weight:600;font-size:0.85rem;">Email</div>
+                            <div style="font-size:0.75rem;">Enviar mensaje</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
 
 {% block extra_js %}
 <script>
-particlesJS('particles-js',
-    {
-        "particles": {
-            "number": {
-                "value": 80,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#69b3a2"
-            },
-            "shape": {
-                "type": "circle"
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": true
-            },
-            "size": {
-                "value": 3,
-                "random": true
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#69b3a2",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 6,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false
-            }
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 55, density: { enable: true, value_area: 900 } },
+        color: { value: "#69b3a2" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3, random: true },
+        size: { value: 2.5, random: true },
+        line_linked: { enable: true, distance: 130, color: "#69b3a2", opacity: 0.18, width: 1 },
+        move: { enable: true, speed: 2, direction: "none", random: true, out_mode: "out" }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
         },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            }
-        },
-        "retina_detect": true
-    }
-);
-</script>
-
-<script>
-// Cambiar estilo del navbar al hacer scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+        modes: { grab: { distance: 130, line_linked: { opacity: 0.45 } } }
+    },
+    retina_detect: true
 });
 </script>
 {% endblock %}

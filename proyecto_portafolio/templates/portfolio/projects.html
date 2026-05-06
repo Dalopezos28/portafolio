@@ -1,18 +1,59 @@
 {% extends "base.html" %}
 
-{% block title %}Projects{% endblock %}
+{% block title %}Proyectos — Diego Lopez{% endblock %}
 
 {% block content %}
-<section>
-    <h1>Projects</h1>
-    {% if projects %}
-        <ul>
+<section class="projects-page">
+    <div class="container">
+        <div class="projects-page-header fade-up">
+            <h1 class="section-title">Todos los Proyectos</h1>
+            <p>Una colección de mis trabajos en análisis de datos, BI y desarrollo</p>
+        </div>
+
+        {% if projects %}
+        <div class="projects-full-grid">
             {% for project in projects %}
-                <li>{{ project.title }}</li>
+            <div class="project-card fade-up">
+                <div class="project-image">
+                    {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                    {% else %}
+                    <i class="fas fa-chart-line project-placeholder"></i>
+                    {% endif %}
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-desc">{{ project.description }}</p>
+                    {% if project.technologies %}
+                    <div class="project-techs" style="margin-bottom:1.2rem;">
+                        {% for tech in project.get_tech_list %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="project-links">
+                        {% if project.github %}
+                        <a href="{{ project.github }}" target="_blank" rel="noopener" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        {% endif %}
+                        {% if project.url and project.url != project.github %}
+                        <a href="{{ project.url }}" target="_blank" rel="noopener" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
-    {% else %}
-        <p>No projects available yet.</p>
-    {% endif %}
+        </div>
+        {% else %}
+        <div style="text-align:center;padding:5rem 0;color:var(--text-muted);">
+            <i class="fas fa-folder-open" style="font-size:3rem;color:var(--primary);opacity:0.3;display:block;margin-bottom:1rem;"></i>
+            <p style="font-size:1.1rem;">No hay proyectos publicados aún.</p>
+            <p style="font-size:0.85rem;margin-top:0.5rem;">Vuelve pronto — ¡estoy trabajando en ello!</p>
+        </div>
+        {% endif %}
+    </div>
 </section>
 {% endblock %}
